@@ -2,7 +2,7 @@
 ##
 ### Installation
 #### Deploy on Heroku
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/grey423/File-Share3"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://github.com/Hans-userboot/file-sharing-3"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 
 #### Deploy in your VPS
