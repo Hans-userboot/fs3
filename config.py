@@ -9,25 +9,25 @@ import os
 from logging.handlers import RotatingFileHandler
 
 # Bot token dari @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6118968145:AAGvfCyKbgHJyDfWKEBQsuiApLh485BAsDA")
 
 # API ID Anda dari my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", ""))
+APP_ID = int(os.environ.get("APP_ID", "11662467"))
 
 # API Hash Anda dari my.telegram.org
-API_HASH = os.environ.get("API_HASH", "")
+API_HASH = os.environ.get("API_HASH", "325e13dfb76973f4bca9bdae2678bbbe")
 
 # ID Channel Database
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001612655312"))
 
 # OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", ""))
+OWNER_ID = int(os.environ.get("OWNER_ID", "5178772086"))
 
 # NAMA OWNER
-OWNER = os.environ.get("OWNER", "")
+OWNER = os.environ.get("OWNER", "xyzuzux")
 
 # Database
-DB_URI = os.environ.get("DATABASE_URL", "")
+DB_URI = os.environ.get("DATABASE_URL", "postgres://txxsmyof:b99F5n0mIL1ND8-uGHSTMwq73_mRSkgd@john.db.elephantsql.com/txxsmyof")
 
 # Username CH & Group
 CHANNEL = os.environ.get("CHANNEL", "Tolak_Ange")
@@ -46,7 +46,7 @@ START_MSG = os.environ.get(
     "<b>Hello {first}</b>\n\n<b>Saya dapat menyimpan file pribadi di Channel Tertentu dan pengguna lain dapat mengaksesnya dari link khusus.</b>",
 )
 try:
-    ADMINS = [int(x) for x in (os.environ.get("ADMINS", "").split())]
+    ADMINS = [int(x) for x in (os.environ.get("ADMINS", "5178772086").split())]
 except ValueError:
     raise Exception("Daftar Admin Anda tidak berisi User ID Telegram yang valid.")
 
