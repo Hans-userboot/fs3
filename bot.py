@@ -134,7 +134,7 @@ class Bot(Client):
 
                 sys.exit()
                 
-          if FORCE_SUB_CHANNEL2:
+            if FORCE_SUB_CHANNEL2:
 
             try:
 
