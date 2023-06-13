@@ -22,7 +22,7 @@ from config import (
 
     FORCE_SUB_CHANNEL,
     
-    FORCE_SUB_CHANNEL2,
+    FORCE_SUB_CHANNEL_II,
 
     FORCE_SUB_GROUP,
 
@@ -134,7 +134,7 @@ class Bot(Client):
 
                 sys.exit()
                 
-            if FORCE_SUB_CHANNEL2:
+            if FORCE_SUB_CHANNEL_II:
 
             try:
 
@@ -152,7 +152,7 @@ class Bot(Client):
 
                 self.LOGGER(__name__).info(
 
-                    f"FORCE_SUB_CHANNEL detected!\n┌ Title: {info.title}\n└ Chat ID: {info.id}\n——"
+                    f"FORCE_SUB_CHANNEL_II detected!\n┌ Title: {info.title}\n└ Chat ID: {info.id}\n——"
 
                 )
 
